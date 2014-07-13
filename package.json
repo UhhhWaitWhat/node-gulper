@@ -1,0 +1,21 @@
+{
+  "name": "gulper",
+  "version": "0.0.1",
+  "description": "A gulp framework",
+  "main": "index.js",
+  "dependencies": {
+    "event-stream": "^3.1.5",
+    "gulp-autoprefixer": "0.0.8",
+    "gulp-clean": "^0.3.1",
+    "gulp-concat": "^2.3.3",
+    "gulp-minify-css": "^0.3.6",
+    "gulp-uglify": "^0.3.1",
+    "gulp-watch": "^0.6.8",
+    "tsort": "^0.0.1"
+  },
+  "keywords": [
+    "gulp"
+  ],
+  "author": "Florian Albertz",
+  "license": "MIT"
+}
