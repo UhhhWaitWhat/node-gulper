@@ -1,7 +1,6 @@
 var lint = require('./lib/linting');
 var inject = require('./lib/inject');
 var sort = require('./lib/sort');
-var docs = require('./lib/docs');
 var globber = require('./lib/all_glob');
 var es = require('event-stream');
 var concat = require('gulp-concat');
@@ -11,7 +10,7 @@ var clean = require('gulp-clean');
 var watch = require('gulp-watch');
 var prefix = require('gulp-autoprefixer');
 
-var Tasker = require('./gulp/lib/tasker');
+var Tasker = require('./lib/tasker');
 
 function Gulper(config) {
 	this.config = config;
@@ -79,17 +78,10 @@ Gulper.prototype.attach = function(gulp) {
 			css.on('end', cb.bind(null, null));
 		});
 	});
-
-	//Generate documentation
-	gulp.task('docs', function() {
-		gulp.src(globber())
-			.pipe(docs(self.config.docs.theme, self.config.docs.tutorials))
-			.pipe(gulp.dest(self.config.docs.dest));
-	});
 };
 
 Gulper.prototype.plugin = function(plugin, dependencies) {
-	this.tasker.task(plugin.name, plugin.output, plugin.glob, plugin.streamer, plugin.base, dependencies);
+	this.tasker.task(plugin.name, plugin.output, plugin.glob, plugin.streamer, plugin.base, dependencies || []);
 };
 
 module.exports = Gulper;
