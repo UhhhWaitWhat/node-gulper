@@ -25,8 +25,8 @@ Views
 =====
 Any views matched by the passed glob, will be copied to the view destination and the following blocks will be replaced with the corresponding script or style blocks:
 
-	<!-- //CSS// -->[\s\S]*<!-- \\CSS\\ -->
-	<!-- //JS// -->[\s\S]*<!-- \\JS\\ -->
+	<!-- //CSS// --><!-- \\CSS\\ -->
+	<!-- //JS// --><!-- \\JS\\ -->
 
 
 Gulp Tasks
