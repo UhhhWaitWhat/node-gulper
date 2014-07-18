@@ -20,6 +20,7 @@ function Gulper(config) {
 Gulper.prototype.attach = function(gulp) {
 	var self = this;
 	this.gulp = gulp;
+	this.tasker.gulp = gulp;
 
 	//Clean all created files
 	gulp.task('clean', function() {
