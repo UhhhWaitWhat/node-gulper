@@ -74,3 +74,4 @@ If you cannot specify a glob matching all your source files (because you read th
 Available Plugins
 =================
 * [static](https://github.com/PaulAvery/sails-gulper-static.git): Simply pass through files
+* [bower](https://github.com/PaulAvery/sails-gulper-bower.git): Include files installed with bower
