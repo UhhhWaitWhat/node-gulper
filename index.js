@@ -54,6 +54,8 @@ Gulper.prototype.attach = function(gulp) {
 			.pipe(concat('bundle.js'))
 			.pipe(uglify());
 
+
+
 		var styles = self.tasker.get('styles')
 			.pipe(sort())
 			.pipe(prefix())
@@ -73,9 +75,9 @@ Gulper.prototype.attach = function(gulp) {
 
 	//Lint all files, and spit out results
 	gulp.task('lint', function(cb) {
-		var js = lint.js();
+		var js = lint.js(gulp);
 		js.on('end', function() {
-			var css = lint.css();
+			var css = lint.css(gulp);
 			css.on('end', cb.bind(null, null));
 		});
 	});
