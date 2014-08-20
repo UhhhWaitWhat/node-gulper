@@ -75,3 +75,7 @@ Available Plugins
 =================
 * [static](https://github.com/PaulAvery/sails-gulper-static.git): Simply pass through files
 * [bower](https://github.com/PaulAvery/sails-gulper-bower.git): Include files installed with bower
+* [component](https://github.com/PaulAvery/sails-gulper-component.git): Include files installed with component
+* [browserify](https://github.com/PaulAvery/sails-gulper-browserify.git): Include a browserified javascript file.
+* [handlebars](https://github.com/PaulAvery/sails-gulper-handlebars.git): Include handlebars templates
+* [sprites](https://github.com/PaulAvery/sails-gulper-sprites.git): Include images as css sprites
