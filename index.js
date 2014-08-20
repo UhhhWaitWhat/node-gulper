@@ -1,7 +1,6 @@
 var lint = require('./lib/linting');
 var inject = require('./lib/inject');
 var sort = require('./lib/sort');
-var globber = require('./lib/all_glob');
 var es = require('event-stream');
 var concat = require('gulp-concat');
 var minify = require('gulp-minify-css');
@@ -53,8 +52,6 @@ Gulper.prototype.attach = function(gulp) {
 			.pipe(sort())
 			.pipe(concat('bundle.js'))
 			.pipe(uglify());
-
-
 
 		var styles = self.tasker.get('styles')
 			.pipe(sort())
